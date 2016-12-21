@@ -58,7 +58,7 @@ npm install node-mi-push
 
 ## 使用
 
-构建MiPush实例, 其中`defaults`为默认的post内容设置
+构建MiPush实例, 其中`defaults`为默认的post数据设置
 ```js
 var miPush=new MiPush({
    appSecret:'YOUR-APP-SECRET',
@@ -70,24 +70,24 @@ var miPush=new MiPush({
 
 发送给一个或多个regId,其中`callback`函数接受参数为`callback(err,res)`,下同
 ```js
-// miPush.sendToRegIds('xxx',data,callback);
-// miPush.sendToRegIds(['xxx','xxxx1'],data,callback);
+miPush.sendToRegIds('xxx',data,callback);
+miPush.sendToRegIds(['xxx','xxxx1'],data,callback);
 ```
 
 发送给一个或多个alias
 ```js
-// miPush.sendToAlias('xxx',data,callback);
-// miPush.sendToAlias(['xxx','xxxx1'],data,callback);
+miPush.sendToAlias('xxx',data,callback);
+miPush.sendToAlias(['xxx','xxxx1'],data,callback);
 ```
 
 发送给所有订阅指定topic的用户
 ```js
-// miPush.sendToTopic('xxx',data,callback);
+miPush.sendToTopic('xxx',data,callback);
 ```
 
 发送给所有订阅多个topics的用户,需要指定topic之间的操作关系支持以下三种：UNION并集,INTERSECTION交集,EXCEPT差集
 ```js
-// miPush.sendToTopics(['xxx','xxx1'],'UNION',data,callback);
+miPush.sendToTopics(['xxx','xxx1'],'UNION',data,callback);
 ```
 
 ## 功能缺失
