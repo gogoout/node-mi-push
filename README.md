@@ -1,7 +1,7 @@
 # node-mi-push
 
 ## 简介
-小米服务端的sdk
+小米推送服务端sdk
 
 ----------------------------------
 
@@ -85,7 +85,7 @@ miPush.sendToAlias(['xxx','xxxx1'],data,callback);
 miPush.sendToTopic('xxx',data,callback);
 ```
 
-发送给所有订阅多个topics的用户,需要指定topic之间的操作关系支持以下三种：UNION并集,INTERSECTION交集,EXCEPT差集
+发送给所有订阅多个topics的用户,需要指定topic之间的操作关系支持以下三种：`UNION`并集,`INTERSECTION`交集,`EXCEPT`差集
 ```js
 miPush.sendToTopics(['xxx','xxx1'],'UNION',data,callback);
 ```
