@@ -68,7 +68,7 @@ var miPush=new MiPush({
 });
 ```
 
-发送给一个或多个regId,其中`callback`函数接受参数为`callback(err,res)`,下同
+发送给一个或多个regId
 ```js
 miPush.sendToRegIds('xxx',data,callback);
 miPush.sendToRegIds(['xxx','xxxx1'],data,callback);
@@ -88,6 +88,15 @@ miPush.sendToTopic('xxx',data,callback);
 发送给所有订阅多个topics的用户,需要指定topic之间的操作关系支持以下三种：`UNION`并集,`INTERSECTION`交集,`EXCEPT`差集
 ```js
 miPush.sendToTopics(['xxx','xxx1'],'UNION',data,callback);
+```
+
+所有上述的callback均为`callback(err,res)`这种格式, 服务器返回的错误格式(伪代码)为
+```js
+Error({
+  name:'404 Not Found',
+  message:'404 Not Found',
+  response:response
+})
 ```
 
 ## 功能缺失
