@@ -90,6 +90,22 @@ miPush.sendToTopic('xxx',data,callback);
 miPush.sendToTopics(['xxx','xxx1'],'UNION',data,callback);
 ```
 
+获取消息的统计数据
+```js
+miPush.counters(packageName, startTime, endTime, callback);
+```
+
+追踪消息状态
+```js
+miPush.traceMessage(msgId, callback);
+miPush.traceMessageByJob(jobKey, callback);
+```
+
+追踪某个时间区域内消息
+```js
+miPush.traceMessages(beginTime, endTime, callback);
+```
+
 所有上述的callback均为`callback(err,res)`这种格式, 服务器返回的错误格式(伪代码)为
 ```js
 Error({
