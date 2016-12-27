@@ -118,3 +118,6 @@ Error({
 ## 功能缺失
 - 推送多条消息
 - ios推送功能
+
+## LICENSE
+[MIT](https://gogoout.mit-license.org)
