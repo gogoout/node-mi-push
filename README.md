@@ -9,12 +9,6 @@
 - [`lodash`](https://github.com/lodash/lodash)
 - [`request`](https://github.com/request/request)
 
-## 安装
-```
-npm install node-mi-push
-```
-
-
 ## 推送POST数据格式说明
 
 - `payload`	消息的内容。
