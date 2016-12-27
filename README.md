@@ -7,7 +7,7 @@
 
 ## 依赖
 - [`lodash`](https://github.com/lodash/lodash)
-- [`form-data`](https://github.com/form-data/form-data)
+- [`request`](https://github.com/request/request)
 
 ## 安装
 ```
